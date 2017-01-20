@@ -24,7 +24,7 @@ var PersonView = Backbone.View.extend({
 		var attribute = {};
 		attribute[e.target.name] = val;
 		// console.log(attribute);
-		$("#personInfoContainer").model.set(attribute);
+		this.model.set(attribute);
 	},
 	initialize: function(){
 		$('#first').css("visibility", "visible");
@@ -49,5 +49,5 @@ var PersonView = Backbone.View.extend({
 
 
 
-var personView = new PersonView();
+var personView = new PersonView({model: new Person()});
 // personView.render();
