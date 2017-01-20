@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8"/>
+	<title>Form Register project</title>
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel='stylesheet' />
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/normalize.min.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+</head>
+<body>
+	
+	<div class="container" id="container">
+	  <div id="first">
+	    <div>
+	      <label>First Name</label>
+	      <input type="text" required="required" name="firstname" id="fname" value="" autofocus/>
+	    </div>
+	    <div>
+	      <label>Last Name</label>
+	      <input type="text" name="lastname" required="required" id="lname" value="" autofocus/>
+	    </div>
+
+	    <button type="button" class="btn btn-primary" id="nextpage">Next</button>
+	  </div>
+
+
+	  <div id="second">
+	    <div>
+	      <label>AddressOne</label>
+	      <input type="text" required="required" name="address1" id="addOne" autofocus/>
+	    </div>
+	    <div>
+	      <label>AddressTwo</label>
+	      <input type="text" name="address2" id="addTwo" autofocus/>
+	    </div>
+	    <div>
+	      <label>City</label>
+	      <input type="text" name="city" id="city" autofocus/>
+	    </div>
+	    <div>
+	      <label>State</label>
+	      <input type="text" name="state" id="state" autofocus/>
+	    </div>
+	    <div>
+	      <label>ZipCode</label>
+	      <input type="number" name="zipcode" id="zipcode" autofocus/>
+	    </div>
+	    <div>
+	      <button type="button" id="complete">Finish</button>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- person info display -->
+	<script id="personInfoContainer" type="text/html">
+		  <% if (firstname) { %>
+		  <p> Firstname is <%= firstname %></p>
+		  <p> Lastname is <%= lastname %></p>
+		  <p> Address1 is <%= address1 %></p>
+		  <p> Address2 is <%= address2 %></p>
+		  <p> City is <%= city %></p>
+		  <p> State is <%= state %></p>
+		  <p> Zipcode is <%= zipcode %></p>
+		  <% } %>
+
+	</script>
+	<!-- JavaScript Includes -->
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/underscore/underscore-min.js"></script>
+	<script src="bower_components/backbone/backbone-min.js"></script>
+
+	<script src="assets/js/script.js"></script>
+
+</body>
+</html>
