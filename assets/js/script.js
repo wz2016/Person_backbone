@@ -1,4 +1,4 @@
-
+// Person model
 var Person = Backbone.Model.extend({
 	default: {
 		firstname: null,
@@ -11,7 +11,7 @@ var Person = Backbone.Model.extend({
 	}
 });
 
-
+//Person View
 var PersonView = Backbone.View.extend({
 	el: $("#container"), 
 	events:{
@@ -47,7 +47,6 @@ var PersonView = Backbone.View.extend({
 	}
 })
 
-
-
+//initial view
 var personView = new PersonView({model: new Person()});
 // personView.render();
